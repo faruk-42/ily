@@ -1,6 +1,7 @@
 body{
     background-color: pink;
     overflow: hidden;
+    animation:  0.5s alternate infinite;
 }
 
 .parent{
@@ -14,14 +15,14 @@ body{
 .img1{
     position: absolute;
     scale: .5;
-    animation: heart 4s ease infinite;
+    animation: heart 2.5s ease infinite;
     opacity: 25%;
 
 }
 .img2{
     position: absolute;
     scale: .4;
-    animation: heart 4s ease infinite;
+    animation: heart 2.5s ease infinite;
     opacity: 50%;
 
 }
@@ -30,9 +31,104 @@ body{
 .img3{
     position: absolute;
     scale: .3;
-    animation: heart 4s ease infinite;
+    animation: heart 2.5s ease infinite;
 
 }
+
+.rain{
+    position: relative;
+}
+
+.zero{
+    opacity: 0;
+}
+
+.multi{
+    animation-name: drop;
+    animation-duration: 0.5s;
+    animation-delay: 14.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.hearts {
+    position: absolute;
+    scale: 0.2;
+  }
+  
+  .heart1 {
+    position: absolute;
+    top:0;
+    animation: fall 5s linear infinite;
+  }
+  
+  .heart2 {
+    position: absolute;
+    top:0;
+    animation: fall2 6s linear infinite;
+  }
+  
+  .heart3 {
+    position: absolute;
+    top:-400px;
+    left:-100px;
+    animation: fall 4s linear infinite 1s;
+  }
+  
+  .heart4 {
+    position: absolute;
+    top:-400px;
+    left:300px;
+    animation: fall2 4s linear infinite 1.5s;
+  }
+  
+  .heart5 {
+    position: absolute;
+    top:-410px;
+    left:250px;
+    animation: fall3 4s linear infinite 2s;
+  }
+  .heart6 {
+    position: absolute;
+    top:-410px;
+    left:-250px;
+    animation: fall3 4s linear infinite 1.5s;
+  }
+  
+  .heart7 {
+    position: absolute;
+    top:-410px;
+    left:-350px;
+    animation: fall2 5s linear infinite .5s;
+  }
+  
+  .heart8 {
+    position: absolute;
+    top:-430px;
+    left:550px;
+    animation: fall3 5s linear infinite .5s;
+  }
+  
+  .heart9 {
+    position: absolute;
+    top:-430px;
+    left:150px;
+    animation: fall4 6s linear infinite .3s;
+  }
+  
+  .heart10 {
+    position: absolute;
+    top:-430px;
+    left:450px;
+    animation: fall5 3.7s linear infinite 1.3s;
+  }
+  
+  .heart11 {
+    position: absolute;
+    top:-430px;
+    left:650px;
+    animation: fall5 4.7s linear infinite 1.7s;
+  }
 
 
 @keyframes heart{
@@ -43,3 +139,37 @@ body{
     80%{transform: translateX(15%) scale(100%) rotate(-8deg);}
     100%{transform: translateX(0%) scale(50%);}
 }
+
+@keyframes fall {
+    0% {top:-410px; transform: translateX(4000px) rotateX(0);}
+    100% {top:10000px; transform: translateX(4500px) rotateX(0);}
+  }
+  
+  @keyframes fall2 {
+    0% {top:-410px; transform: translateX(5000px) rotateX(0);}
+    100% {top:10000px; transform: translateX(6000px) rotateX(0);}
+  }
+  
+  @keyframes fall3 {
+    0% {top:-430px; transform: translateX(3000px) rotateX(0);}
+    100% {top:10000px; transform: translateX(3500px) rotateX(0);}
+  }
+  
+  @keyframes fall4 {
+    0% {top:-430px; transform: translateX(3250px) rotateX(0);}
+    100% {top:10000px; transform: translateX(4500px) rotateX(0);}
+  }
+  
+  @keyframes fall5 {
+    0% {top:-410px; transform: translateX(1000px) rotateX(0);}
+    100% {top:10000px; transform: translateX(1250) rotateX(0);}
+  }
+
+  @keyframes drop {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }

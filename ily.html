@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+        <body>
+            <audio id="audio" src="pembe.mp3" preload="auto">
+            </audio>
+            
+        <div id="multi" class="zero">
+            <div class="rain">
+                <div class="hearts">
+                    <div class="heart1"><img src="h.webp"></div>
+                    <div class="heart2"><img src="h.webp"></div>
+                    <div class="heart3"><img src="h.webp"></div>
+                    <div class="heart4"><img src="h.webp"></div>
+                    <div class="heart6"><img src="h.webp"></div>
+                    <div class="heart7"><img src="h.webp"></div>
+                    <div class="heart8"><img src="h.webp"></div>
+                    <div class="heart9"><img src="h.webp"></div>
+                    <div class="heart10"><img src="h.webp"></div>
+                    <div class="heart11"><img src="h.webp"></div>
+                  </div>
+            </div>
+        </div>
+
+            <div class="parent">
+                <img class="img1" src="h.webp"> 
+                <img class="img2" src="h.webp"> 
+                <img id="img" class="img3" src="h.webp"> 
+            </div>
+           
+            <script>
+                var audio = document.getElementById("audio");
+                var img = document.getElementById("img");
+                
+                function play() {
+                  audio.play();
+                  document.getElementById('multi').className = 'multi';
+                }
+                
+                
+                img.addEventListener('click', play);
+              </script>
+        </body>
+</html>
