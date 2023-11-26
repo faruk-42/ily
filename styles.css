@@ -1,0 +1,45 @@
+body{
+    background-color: pink;
+    overflow: hidden;
+}
+
+.parent{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh
+}
+.img1{
+    position: absolute;
+    scale: .5;
+    animation: heart 4s ease infinite;
+    opacity: 25%;
+
+}
+.img2{
+    position: absolute;
+    scale: .4;
+    animation: heart 4s ease infinite;
+    opacity: 50%;
+
+}
+
+
+.img3{
+    position: absolute;
+    scale: .3;
+    animation: heart 4s ease infinite;
+
+}
+
+
+@keyframes heart{
+    0%{transform: translateX(0%) scale(50%);}
+    20%{transform: translateX(-20%) scale(100%) rotate(20deg);}
+    40%{transform: translateX(20%) scale(150%) rotate(-20deg);}
+    60%{transform: translateX(-15%) scale(125%) rotate(8deg);}
+    80%{transform: translateX(15%) scale(100%) rotate(-8deg);}
+    100%{transform: translateX(0%) scale(50%);}
+}
